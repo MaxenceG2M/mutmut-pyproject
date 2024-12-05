@@ -11,3 +11,9 @@ dependencies = [
 dev = [
     "ruff>=0.8.2",
 ]
+
+[tool.mutmut]
+paths_to_mutate = "project1/"
+tests_dir = "tests/"
+runner = "runner=python -m unittest discover -b -t tests/ -p '*_test.py' tests/"
+debug = true
